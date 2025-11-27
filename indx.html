@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechGearHub - Free online tools like BMI Calculator, Password Generator, QR Code Maker, and more. Colorful, responsive, and SEO-optimized tech utilities.">
+    <meta name="keywords" content="tech tools, online calculators, password generator, QR code, BMI calculator, free utilities, SEO optimized">
+    <title>TechGearHub - Colorful Tech Tools & Utilities</title>
+    <!-- Google Fonts for Attractive UI -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google AdSense Script - Replace 'ca-pub-XXXXXXXXXXXXXXXX' with your Publisher ID -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <style>
+        /* Base Styles for Colorful UI */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #f0f4f8, #e0e7ff); color: #333; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        /* Header - Vibrant Gradient */
+        header { background: linear-gradient(90deg, #4f46e5, #ec4899); color: white; padding: 20px; text-align: center; }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        header p { font-size: 1.2em; }
+
+        /* Navigation - Colorful Buttons */
+        nav { display: flex; justify-content: center; gap: 15px; margin: 20px 0; }
+        nav a { text-decoration: none; color: white; background: #6366f1; padding: 10px 20px; border-radius: 30px; font-weight: 600; transition: transform 0.3s; }
+        nav a:hover { transform: scale(1.05); background: #4f46e5; }
+
+        /* Hero Section - Eye-Catching with Animation */
+        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, #a855f7, #3b82f6); color: white; border-radius: 20px; margin: 20px 0; animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .hero h2 { font-size: 3em; margin-bottom: 20px; }
+        .hero p { font-size: 1.5em; margin-bottom: 30px; }
+        .hero button { background: #ec4899; border: none; padding: 15px 30px; color: white; font-size: 1.2em; border-radius: 50px; cursor: pointer; transition: background 0.3s; }
+        .hero button:hover { background: #db2777; }
+
+        /* Featured Tools - Colorful Grid Cards */
+        .tools-section { padding: 40px 0; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .tool-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+        .tool-card:hover { transform: translateY(-10px); }
+        .tool-card h3 { font-size: 1.8em; margin-bottom: 15px; color: #4f46e5; }
+        .tool-card input, .tool-card button { width: 100%; padding: 12px; margin: 8px 0; border-radius: 8px; border: 1px solid #ddd; font-size: 1em; }
+        .tool-card button { background: #22c55e; color: white; border: none; cursor: pointer; }
+        .tool-card button:hover { background: #16a34a; }
+        .result { font-size: 1.2em; color: #ef4444; margin-top: 10px; font-weight: bold; }
+
+        /* Ad Sections - Integrated Colorfully */
+        .ad-banner { margin: 30px 0; text-align: center; background: #fef3c7; padding: 20px; border-radius: 15px; }
+
+        /* Footer - Gradient Footer */
+        footer { background: linear-gradient(90deg, #4f46e5, #ec4899); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        footer p { font-size: 1em; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) { .hero h2 { font-size: 2em; } .hero p { font-size: 1.2em; } nav { flex-direction: column; gap: 10px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TechGearHub</h1>
+        <p>Your colorful hub for free tech tools and utilities!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#blog">Blog</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h2>Welcome to TechGearHub! 🌟</h2>
+        <p>Explore vibrant, free online tools like BMI Calculator, Password Generator, QR Code Maker, and more. Fully responsive and fun to use!</p>
+        <button onclick="window.location.href='#tools'">Get Started Now!</button>
+    </section>
+
+    <section id="tools" class="tools-section container">
+        <h2 style="text-align: center; color: #ec4899; font-size: 2.5em; margin-bottom: 30px;">Featured Tools 🎉</h2>
+        <div class="tools-grid">
+            <!-- BMI Calculator -->
+            <div class="tool-card">
+                <h3>🧍 BMI Calculator</h3>
+                <input type="number" id="weight" placeholder="Weight (kg)">
+                <input type="number" id="height" placeholder="Height (cm)">
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <div id="bmi-result" class="result"></div>
+            </div>
+
+            <!-- Password Generator -->
+            <div class="tool-card">
+                <h3>🔐 Password Generator</h3>
+                <input type="number" id="passlength" placeholder="Length (8-50)" value="16" min="8" max="50">
+                <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+                <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+                <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                <label><input type="checkbox" id="symbols" checked> Symbols</label>
+                <button onclick="generatePassword()">Generate Password</button>
+                <div id="password" class="result"></div>
+                <button onclick="copyPassword()" style="background: #6366f1; margin-top: 10px;">Copy</button>
+            </div>
+
+            <!-- QR Code Generator -->
+            <div class="tool-card">
+                <h3>📱 QR Code Generator</h3>
+                <input type="text" id="qrtext" placeholder="Enter text or URL">
+                <button onclick="generateQR()">Generate QR</button>
+                <div id="qrcode" style="margin-top: 15px;"></div>
+            </div>
+
+            <!-- Add more colorful tool cards as needed -->
+        </div>
+    </section>
+
+    <!-- Ad Banner Section -->
+    <div class="ad-banner container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="YOUR_BANNER_AD_UNIT_ID_HERE"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 TechGearHub. All rights reserved. Made with ❤️ for tech enthusiasts.</p>
+    </footer>
+
+    <!-- JavaScript for Dynamic Tools -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        function calculateBMI() {
+            let weight = document.getElementById('weight').value;
+            let height = document.getElementById('height').value / 100;
+            if (weight && height) {
+                let bmi = (weight / (height * height)).toFixed(2);
+                document.getElementById('bmi-result').innerHTML = `BMI: ${bmi} 💪`;
+            } else {
+                document.getElementById('bmi-result').innerHTML = 'Enter values! ⚠️';
+            }
+        }
+
+        function generatePassword() {
+            let length = document.getElementById('passlength').value;
+            let uppercase = document.getElementById('uppercase').checked ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' : '';
+            let lowercase = document.getElementById('lowercase').checked ? 'abcdefghijklmnopqrstuvwxyz' : '';
+            let numbers = document.getElementById('numbers').checked ? '0123456789' : '';
+            let symbols = document.getElementById('symbols').checked ? '!@#$%^&*()_+-=' : '';
+            let charset = uppercase + lowercase + numbers + symbols;
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                password += charset.charAt(Math.floor(Math.random() * charset.length));
+            }
+            document.getElementById('password').textContent = password;
+        }
+
+        function copyPassword() {
+            let pass = document.getElementById('password').textContent;
+            navigator.clipboard.writeText(pass).then(() => alert('Copied! 📋'));
+        }
+
+        function generateQR() {
+            document.getElementById('qrcode').innerHTML = '';
+            let text = document.getElementById('qrtext').value;
+            if (text) new QRCode(document.getElementById('qrcode'), { text: text, width: 180, height: 180, colorDark: '#4f46e5', colorLight: '#ffffff' });
+        }
+    </script>
+</body>
+</html>
